@@ -53,9 +53,13 @@ int main()
 
    for(i=0;i<=strlen(conver_str);i++)
    {
-     if(conver_str[i]>=97 && conver_str[i]<=122)   //lowercase alphabets have ASCII value between 97 to 122 
+     if(conver_str[i]>=65 && conver_str[i]<=90)   //uppercase alphabets have ASCII value between 65 to 90 
      {
-        conver_str[i]=conver_str[i]-32;            //when lowercase alphabet is encountered then it is subtracted by 32
+        conver_str[i]=conver_str[i]+32;            //when uppercase alphabet is encountered then it is added by 32 to convert to lowercase
+     }
+     else if(conver_str[i]>=97 && conver_str[i]<=122)  //lowercase alphabets have ASCII value between 97 to 122
+     {
+         conver_str[i]=conver_str[i]-32;  //when lowercase alphabet is encountered then it is subtracted by 32 to convert to uppercase
      }
    }
    conver_str[i]='\0';
